@@ -1,13 +1,6 @@
 from common import *
 import pandas as pd
 
-train = pd.read_csv("data/bank-note/train.csv").to_numpy()
-test = pd.read_csv("data/bank-note/test.csv").to_numpy()
-train_labels = train[:,-1]
-test_labels = test[:,-1]
-
-train_data = train[:,0:-1]
-test_data = test[:,0:-1]
 
 def hybrid_mc(X, y, initial, epsilon, leapfrog, burn=False):
     dim = X.shape[1]
